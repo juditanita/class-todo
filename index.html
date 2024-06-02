@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TodoList</title>
+</head>
+<body>
+
+    <main class="container">
+        <header class="header-container">
+            <h1>Today's Task Creator</h1>
+            <div class="time-container"><p id="time">time</p></div>
+            
+        </header>
+
+
+        <article class="article-container">
+        <div class="input-add">
+            <input id="taskInput" type="text" placeholder="Add something" required>
+            <button id="addBtn" class="btn addBtn">Add</button>
+        </div>
+
+        <div class="display-items-container">
+            <ul id="taskList" class="list-item-container">
+                <div class="list-items">
+                    <li class="item">
+                        get thing done</li>
+                    <div class="action-btn"><button class="btn btn-edit">Edit</button>
+                        <button class="btn btn-delete">Delete</button></div>
+                
+            </div>
+            <div class="list-items">
+                <li class="item">
+                    get thing done</li>
+                <div class="action-btn"><button class="btn btn-edit">Edit</button>
+                    <button class="btn btn-delete">Delete</button></div>
+            
+        </div>   
+           
+          
+            
+        </div>
+            </ul>
+        </div>
+    </article>
+    </main>
+ 
+    
+    <script type="text/javascript" src="todolist.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
