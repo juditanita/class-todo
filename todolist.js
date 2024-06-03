@@ -1,6 +1,7 @@
 class TodoList {
   constructor() {
     this.tasks = [];
+    this.counter = 0;
   }
 
   addTask(taskText) {
@@ -9,6 +10,8 @@ class TodoList {
     };
 
     this.tasks.push(task);
+
+    this.counter++;
     this.saveTaskToLocal();
     this.renderTasks();
   }
@@ -17,6 +20,7 @@ class TodoList {
 
   editTask(index, newTask) {
     this.tasks[index].text = newTask;
+
     this.saveTaskToLocal();
     this.renderTasks();
   }
@@ -27,9 +31,9 @@ class TodoList {
     this.tasks.splice(index, 1);
     this.saveTaskToLocal();
     this.renderTasks();
+    this.counter --;
   }
 
-  
   //localStorage functions
 
   saveTaskToLocal() {
@@ -38,15 +42,22 @@ class TodoList {
 
   loadTaskFromLocal() {
     const storedTask = localStorage.getItem("tasks");
-    
 
     this.tasks = JSON.parse(storedTask) || [];
+
     this.renderTasks();
   }
 
   //get the function that append the ul to display the li + buttons
   renderTasks() {
     const taskList = document.getElementById("taskList");
+    if (this.counter === 0) {
+      taskList.classList.remove("add-shadow");
+    } else {
+      taskList.classList.add("add-shadow");
+    }
+
+    taskList.innerHTML = "";
 
     this.tasks.forEach((task, index) => {
       const listDiv = document.createElement("div");
@@ -54,13 +65,12 @@ class TodoList {
 
       //   the todoList instance is from the other js
       listDiv.innerHTML = `<li class="item" >
-           ${task.text}</li>
-<div class="action-btn">
-<button class="btn btn-edit" onClick="todoList.editTask(${index}, prompt('Edit task:','${task.text}'))">Edit</button>
+           ${task.text}</li><div class="action-btn"><button class="btn btn-edit" onClick="todoList.editTask(${index}, prompt('Edit task:','${task.text}'))">Edit</button>
            <button class="btn btn-delete" onClick="todoList.deleteTask(${index})">Delete</button>
 `;
 
       taskList.appendChild(listDiv);
+      this.counter++;
     });
   }
 }

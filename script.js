@@ -1,11 +1,5 @@
-
-
 const todoList = new TodoList();
 const addBtnButton = document.getElementById("addBtn");
-
-
-
-
 
 
 function addTask() {
@@ -33,14 +27,3 @@ document.getElementById("taskInput").addEventListener("keydown", (event) => {
 document.addEventListener("DOMContentLoaded", () => {
   todoList.loadTaskFromLocal();
 });
-
-
-
-
-
-
-
-
-
-
-
