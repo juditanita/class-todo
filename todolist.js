@@ -13,6 +13,27 @@ class TodoList {
     this.renderTasks();
   }
 
+
+
+  //buttons functionalities edit 
+
+  editTask(index, newTask){
+    this.tasks[index].text=newTask;
+    this.saveTaskToLocal();
+    this.renderTasks();
+  }
+
+
+  //delete button
+
+  deleteTask(index){
+
+    this.tasks.splice(index,1);
+    this.saveTaskToLocal();
+    this.renderTasks();
+  }
+
+
   //localStorage functions
 
   saveTaskToLocal() {
@@ -39,11 +60,13 @@ class TodoList {
       const listDiv = document.createElement("div");
       listDiv.classList.add("list-items");
 
+
+    //   the todoList instance is from the other js
       listDiv.innerHTML = `<li class="item" >
            ${task.text}</li>
 <div class="action-btn">
-<button class="btn btn-edit" onClick={editTask}>Edit</button>
-           <button class="btn btn-delete" onClick={deleteTask}>Delete</button>
+<button class="btn btn-edit" onClick="todoList.editTask(${index}, prompt('Edit task:','${task.text}'))">Edit</button>
+           <button class="btn btn-delete" onClick="todoList.deleteTask(${index})">Delete</button>
 `;
 
       taskList.appendChild(listDiv);
