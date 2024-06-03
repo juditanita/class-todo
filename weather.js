@@ -51,12 +51,12 @@ if ("geolocation" in navigator) {
     weatherMusic.textContent = " En egy ringy rongy torpe vagyok";
   }
 
-  function randomNumbers(data) {
+  export function randomNumbers(data) {
     const number = Math.floor(Math.random() * data.length);
     return number;
   }
   
-  function showData(url) {
+ export  function showData(url) {
     const dataList = {
       clear: [
         "bNowU63PF5E",
@@ -125,7 +125,7 @@ if ("geolocation" in navigator) {
     });
   }
   
-  function getWeatherData(url, callback) {
+  export function getWeatherData(url, callback) {
     fetch(url).then((response) => {
       response.json().then((data) => {
         callback(data);
