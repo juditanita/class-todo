@@ -29,6 +29,7 @@ class TodoList {
     this.renderTasks();
   }
 
+  
   //localStorage functions
 
   saveTaskToLocal() {
@@ -37,6 +38,7 @@ class TodoList {
 
   loadTaskFromLocal() {
     const storedTask = localStorage.getItem("tasks");
+    
 
     this.tasks = JSON.parse(storedTask) || [];
     this.renderTasks();
@@ -45,10 +47,6 @@ class TodoList {
   //get the function that append the ul to display the li + buttons
   renderTasks() {
     const taskList = document.getElementById("taskList");
-    console.log(this.tasks.length)
-    if(this.tasks.length>0){
-        taskList.classList.add("ul-container");
-    taskList.innerHTML = "";
 
     this.tasks.forEach((task, index) => {
       const listDiv = document.createElement("div");
@@ -64,6 +62,5 @@ class TodoList {
 
       taskList.appendChild(listDiv);
     });
-}
   }
 }

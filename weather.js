@@ -43,7 +43,7 @@ if ("geolocation" in navigator) {
   
       const apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`;
   
-      console.log(apiURL);
+      
       showData(apiURL);
     });
   } else {
@@ -94,11 +94,11 @@ if ("geolocation" in navigator) {
     };
   
     getWeatherData(url, (result) => {
-      //console.log(result);
+      
   
       if (result.cod === 200) {
           const temp =(result?.main.temp).toFixed(0);
-          console.log(temp)
+         
         const description = result?.weather[0]?.description;
         const imageIcon=result?.weather[0]?.icon
   
@@ -109,8 +109,7 @@ if ("geolocation" in navigator) {
   
         const songArray = dataList[singleSong];
         const randomSongChoose = songArray[randomNumbers(songArray)];
-        //console.log(songArray);
-        //console.log(randomSongChoose);
+        
   
         href = `https://www.youtube.com/watch?v=${randomSongChoose}`;
   
