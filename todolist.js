@@ -46,9 +46,9 @@ class TodoList {
   renderTasks() {
     const taskList = document.getElementById("taskList");
     console.log(this.tasks.length)
-    if(this.tasks.length===0){
-        taskList.style.visibility="hidden"
-    }
+    if(this.tasks.length!== 0){
+        taskList.classList.add("ul-container");
+    } 
     taskList.innerHTML = "";
 
     this.tasks.forEach((task, index) => {

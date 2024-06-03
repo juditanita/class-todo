@@ -151,7 +151,7 @@ input[type="text"]:focus {
   margin: 20px auto;
 }
 
-ul {
+.ul-container {
   display: flex;
   background: white;
   box-shadow:
@@ -161,6 +161,8 @@ ul {
   padding: 0.5rem;
   margin: 2px auto;
 }
+
+
 
 .list-item-container {
   width: 90%;
