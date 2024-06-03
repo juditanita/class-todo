@@ -1,12 +1,12 @@
 const todoList = new TodoList();
+const addBtnButton=document.getElementById("addBtn");
 
 function addTask(){
-
     const taskInput= document.getElementById("taskInput");
 
-    const taskText= taskInput.value.trim();
+  const taskText= taskInput.value.trim();
 
-    if(taskText.length>0){
+   if(taskText.length>0){
         todoList.addTask(taskText);
         
         todoList.renderTasks();
@@ -15,7 +15,7 @@ function addTask(){
     }
 }
 
-document.getElementById("addBtn").addEventListener('click', addTask);
+addBtnButton.addEventListener('click', addTask);
 
 
 //what happens when the input box has a value and the enter
@@ -24,5 +24,9 @@ document.getElementById("taskInput").addEventListener('keydown',(event)=>{
         addTask();
     }
 });
+
+document.addEventListener("DOMContentLoaded", ()=>{
+todoList.loadTaskFromLocal();
+})
 
 //until the input box is empty button is disabled

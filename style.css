@@ -6,7 +6,7 @@ li {
   box-sizing: border-box;
 }
 
-main {
+.container {
   max-width: 600px;
   margin: 200px auto;
   border: 2px solid red;
@@ -31,15 +31,14 @@ li {
 
 header {
   width: 98%;
-position: relative;
+  position: relative;
   padding: 40px 30px;
-  background:rgb(162, 243, 42);
+  background: rgb(162, 243, 42);
   padding-bottom: 1rem;
   margin-bottom: 0.6rem;
   display: flex;
   justify-content: center;
   align-items: center;
- 
 }
 
 .btn {
@@ -49,7 +48,7 @@ position: relative;
   border: none;
   font-size: 1rem;
   color: #1b1010;
-  background: #5AE736;
+  background: #5ae736;
   font-weight: 700;
   transition: 0.6s ease-out;
   text-transform: uppercase;
@@ -85,25 +84,24 @@ input[type="text"]:focus {
   font-weight: 700;
 }
 
-.header-container{
-    position: relative;
+.header-container {
+  position: relative;
 }
 
-.time-container{
-    background: #d2bfbf;
-    
-    position: absolute;
-    top: 0;
-    right: 0;
-    color:rgb(11, 9, 9);
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    display: flex;
+.time-container {
+  background: #d2bfbf;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: rgb(11, 9, 9);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
   justify-content: center;
   align-items: center;
   font-weight: 700;
-
 }
 
 .input-add {
@@ -114,8 +112,7 @@ input[type="text"]:focus {
 
   gap: 1rem;
 }
-
-.display-items-container {
+display-items-container . {
   display: flex;
   margin-top: 20px;
   width: 95%;
@@ -126,7 +123,7 @@ input[type="text"]:focus {
 ul {
   display: flex;
   background: #e7d6d6;
- 
+
   box-shadow:
     rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -174,4 +171,61 @@ ul {
 .btn-delete {
   background: #84073f;
   color: white;
+}
+
+@media screen and (max-width: 500px) {
+  main.container {
+    box-shadow: none;
+    margin-top: 10px;
+    padding: 1rem;
+  }
+
+  article.article-container {
+    width: 100%;
+    
+    padding-button: 4rem;
+  }
+  header {
+    width: 70%;
+  }
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  .btn {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .input-add {
+    width: 90%;
+  }
+
+  .input-add input {
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+
+ 
+ .display-items-container {
+    width: 100%;
+    
+  }
+  ul{
+    width:100%;
+  }
+  li.item {
+    font-size: 1rem;
+    max-width: 50%;
+
+    word-break: break-all;
+  }
+  .list-items {
+    gap: 5px;
+  }
+
+  .action-btn {
+    margin-right: 0rem;
+   
+  }
 }
