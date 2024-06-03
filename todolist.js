@@ -13,26 +13,21 @@ class TodoList {
     this.renderTasks();
   }
 
+  //buttons functionalities edit
 
-
-  //buttons functionalities edit 
-
-  editTask(index, newTask){
-    this.tasks[index].text=newTask;
+  editTask(index, newTask) {
+    this.tasks[index].text = newTask;
     this.saveTaskToLocal();
     this.renderTasks();
   }
-
 
   //delete button
 
-  deleteTask(index){
-
-    this.tasks.splice(index,1);
+  deleteTask(index) {
+    this.tasks.splice(index, 1);
     this.saveTaskToLocal();
     this.renderTasks();
   }
-
 
   //localStorage functions
 
@@ -45,23 +40,22 @@ class TodoList {
 
     this.tasks = JSON.parse(storedTask) || [];
     this.renderTasks();
-    
   }
-
-
-
 
   //get the function that append the ul to display the li + buttons
   renderTasks() {
     const taskList = document.getElementById("taskList");
+    console.log(this.tasks.length)
+    if(this.tasks.length===0){
+        taskList.style.visibility="hidden"
+    }
     taskList.innerHTML = "";
 
     this.tasks.forEach((task, index) => {
       const listDiv = document.createElement("div");
       listDiv.classList.add("list-items");
 
-
-    //   the todoList instance is from the other js
+      //   the todoList instance is from the other js
       listDiv.innerHTML = `<li class="item" >
            ${task.text}</li>
 <div class="action-btn">
