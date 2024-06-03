@@ -46,9 +46,8 @@ class TodoList {
   renderTasks() {
     const taskList = document.getElementById("taskList");
     console.log(this.tasks.length)
-    if(this.tasks.length!== 0){
+    if(this.tasks.length>0){
         taskList.classList.add("ul-container");
-    } 
     taskList.innerHTML = "";
 
     this.tasks.forEach((task, index) => {
@@ -65,5 +64,6 @@ class TodoList {
 
       taskList.appendChild(listDiv);
     });
+}
   }
 }
