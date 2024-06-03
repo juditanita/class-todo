@@ -45,7 +45,7 @@ class TodoList {
 
     this.tasks = JSON.parse(storedTask) || [];
     this.renderTasks();
-    console.log(tasks);
+    
   }
 
 

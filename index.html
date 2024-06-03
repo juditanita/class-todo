@@ -4,22 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ecce996c38.js" crossorigin="anonymous"></script>
     <title>TodoList</title>
 </head>
 <body>
 
-    <main class="container">
-        <header class="header-container">
-            <h1>Today's Task Creator</h1>
-            <div class="time-container"><p id="time">time</p></div>
+    <main class="container resuable-flex">
+         <header class="header-container">
+            <h1 class="header-container resuable-flex"><p id="day">Day</p> Task Creator</h1>
+            <div id="weatherMusic"></div>
+        <div class="weather-display resuable-flex ">
+
+            <div id="currentDate" class="today-date"></div>
+            <div id="weatherSymb" class="weathersymbol"></div>
             
+            
+           
+        </div>
+       
+        
+          
+           
         </header>
 
 
-        <article class="article-container">
+        <article class="article-container resuable-flex">
         <div class="input-add">
             <input id="taskInput" type="text" placeholder="Add something" required>
-            <button id="addBtn" class="btn addBtn" type="button">Add</button>
+            <button id="addBtn" class="btn addBtn" type="button">Add Todo</button>
         </div>
 
         <div class="display-items-container">
