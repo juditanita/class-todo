@@ -54,7 +54,7 @@ class TodoList {
     const taskList = document.getElementById("taskList");
     const taskLength = document.getElementById("tasklength");
     this.total = this.tasks.length;
-    console.log(this.total);
+    console.log(this.tasks.length);
     if (this.total === 0) {
       taskList.classList.remove("add-shadow");
     } else {
