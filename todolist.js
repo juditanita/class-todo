@@ -10,7 +10,7 @@ class TodoList {
     };
 
     this.tasks.push(task);
-    this.total+=1;
+    this.total++;
    
 
     this.saveTaskToLocal();
@@ -31,6 +31,7 @@ class TodoList {
   deleteTask(index) {
     this.tasks.splice(index, 1);
     this.saveTaskToLocal();
+    this.total--;
     this.renderTasks();
   }
 
@@ -70,6 +71,7 @@ class TodoList {
 `;
 
       taskList.appendChild(listDiv);
+      this.total +=this.total;
     });
   }
 }
