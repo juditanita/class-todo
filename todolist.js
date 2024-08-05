@@ -53,6 +53,7 @@ class TodoList {
   renderTasks() {
     const taskList = document.getElementById("taskList");
     const taskLength = document.getElementById("tasklength");
+    this.total = this.tasks.length;
     console.log(this.total);
     if (this.total === 0) {
       taskList.classList.remove("add-shadow");
@@ -64,6 +65,7 @@ class TodoList {
     taskList.innerHTML = "";
 
     this.tasks.forEach((task, index) => {
+    
       const listDiv = document.createElement("div");
       listDiv.classList.add("list-items");
 
@@ -74,7 +76,7 @@ class TodoList {
 `;
 
       taskList.appendChild(listDiv);
-      this.total++;
+    
     });
   }
 }
