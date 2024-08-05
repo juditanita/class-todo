@@ -55,16 +55,18 @@ class TodoList {
     const taskLength = document.getElementById("tasklength");
     this.total = this.tasks.length;
    
-    if (this.total === 0) {
+
+    if(this.total === 1){
+      taskLength.innerText= `You have ${this.total} task to do`;
+    }
+    else if (this.total === 0) {
       taskList.classList.remove("add-shadow");
-      taskLength.innerText= `You have no task to do`;
+      taskLength.innerText = "You have no task to do"
     } else {
       taskList.classList.add("add-shadow");
     }
 
-    if(this.total ===1){
-      taskLength.innerText= `You have ${this.total} task to do`;
-    }
+   
  
     taskLength.innerText= `You have ${this.total} tasks to do`;
     taskList.innerHTML = "";
