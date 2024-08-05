@@ -60,7 +60,7 @@ class TodoList {
       taskList.classList.add("add-shadow");
     }
 
-  taskLength.innerText= `You have ${total} tasks to do`;
+  taskLength.innerText= `You have ${this.total} tasks to do`;
     taskList.innerHTML = "";
 
     this.tasks.forEach((task, index) => {
