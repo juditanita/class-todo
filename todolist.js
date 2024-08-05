@@ -52,6 +52,7 @@ class TodoList {
   //get the function that append the ul to display the li + buttons
   renderTasks() {
     const taskList = document.getElementById("taskList");
+    const taskLength = document.getElementById("tasklength");
     console.log(this.total);
     if (this.total === 0) {
       taskList.classList.remove("add-shadow");
@@ -59,6 +60,7 @@ class TodoList {
       taskList.classList.add("add-shadow");
     }
 
+  taskLength.innerText= `You have ${total} tasks to do`;
     taskList.innerHTML = "";
 
     this.tasks.forEach((task, index) => {
