@@ -157,7 +157,7 @@ ul {
 
 .list-item-container {
   width: 90%;
-flex;
+display:flex;
   gap: 0.4rem;
 }
 
@@ -177,6 +177,7 @@ li.item {
   max-width: 70%;
   margin-right: 8px;
 }
+
 .list-items:last-child {
   border-bottom: none;
 }
