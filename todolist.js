@@ -1,7 +1,7 @@
 class TodoList {
   constructor() {
     this.tasks = [];
-    this.total =0;
+    this.total = 0;
   }
 
   addTask(taskText) {
@@ -10,6 +10,7 @@ class TodoList {
     };
 
     this.tasks.push(task);
+    this.total+=1;
    
 
     this.saveTaskToLocal();
