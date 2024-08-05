@@ -10,7 +10,7 @@ class TodoList {
     };
 
     this.tasks.push(task);
-    this.total++;
+    
    
 
     this.saveTaskToLocal();
@@ -31,7 +31,7 @@ class TodoList {
   deleteTask(index) {
     this.tasks.splice(index, 1);
     this.saveTaskToLocal();
-    this.total--;
+   
     this.renderTasks();
   }
 
@@ -52,6 +52,7 @@ class TodoList {
   //get the function that append the ul to display the li + buttons
   renderTasks() {
     const taskList = document.getElementById("taskList");
+    console.log(total);
     if (this.total === 0) {
       taskList.classList.remove("add-shadow");
     } else {
@@ -71,7 +72,7 @@ class TodoList {
 `;
 
       taskList.appendChild(listDiv);
-      this.total +=this.total;
+      this.total += this.total;
     });
   }
 }
