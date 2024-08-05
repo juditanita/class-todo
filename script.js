@@ -1,4 +1,4 @@
-
+// const todoList = new TodoList();
 const addBtnButton = document.getElementById("addBtn");
 
 
@@ -15,7 +15,6 @@ function addTask() {
     taskInput.value = "";
   }
 }
-
 
 addBtnButton.addEventListener("click", addTask);
 
