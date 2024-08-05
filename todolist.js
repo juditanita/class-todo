@@ -1,7 +1,8 @@
 class TodoList {
   constructor() {
     this.tasks = [];
-    this.counter = 0;
+    this.total = 0;
+  
   }
 
   addTask(taskText) {
@@ -11,7 +12,7 @@ class TodoList {
 
     this.tasks.push(task);
 
-    this.counter++;
+   
     this.saveTaskToLocal();
     this.renderTasks();
   }
@@ -31,7 +32,7 @@ class TodoList {
     this.tasks.splice(index, 1);
     this.saveTaskToLocal();
     this.renderTasks();
-    this.counter --;
+   
   }
 
   //localStorage functions
@@ -44,21 +45,26 @@ class TodoList {
     const storedTask = localStorage.getItem("tasks");
 
     this.tasks = JSON.parse(storedTask) || [];
-
+    this.counter = this.tasks.length;
     this.renderTasks();
+  }
+
+
+  getTotalTask(){
+    this.total = this.tasks.length;
   }
 
   //get the function that append the ul to display the li + buttons
   renderTasks() {
     const taskList = document.getElementById("taskList");
-    if (this.counter === 0) {
+    if (this.total === 0) {
       taskList.classList.remove("add-shadow");
     } else {
       taskList.classList.add("add-shadow");
     }
 
     taskList.innerHTML = "";
-
+  
     this.tasks.forEach((task, index) => {
       const listDiv = document.createElement("div");
       listDiv.classList.add("list-items");
@@ -70,7 +76,7 @@ class TodoList {
 `;
 
       taskList.appendChild(listDiv);
-      this.counter++;
+      
     });
   }
 }

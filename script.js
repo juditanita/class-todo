@@ -1,5 +1,6 @@
 const todoList = new TodoList();
 const addBtnButton = document.getElementById("addBtn");
+const counterBtn = document.getElementById("counterCountainer");
 
 
 
@@ -16,6 +17,8 @@ function addTask() {
   }
 }
 
+
+counterBtn.innerText=getTotalTask();
 addBtnButton.addEventListener("click", addTask);
 
 //what happens when the input box has a value and the enter
