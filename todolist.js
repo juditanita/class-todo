@@ -1,7 +1,7 @@
 class TodoList {
   constructor() {
     this.tasks = [];
-  this.total=0;
+   this.total = this.tasks.length;
   
   }
 
