@@ -158,6 +158,7 @@ ul {
 .list-item-container {
   width: 90%;
 display:flex;
+flex-direction:column;
   gap: 0.4rem;
 }
 
