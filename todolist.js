@@ -1,7 +1,7 @@
 class TodoList {
   constructor() {
     this.tasks = [];
-    this.total = 0;
+  this.total=0;
   
   }
 
@@ -50,9 +50,7 @@ class TodoList {
   }
 
 
-  getTotalTask(){
-    this.total = this.tasks.length;
-  }
+
 
   //get the function that append the ul to display the li + buttons
   renderTasks() {
