@@ -164,6 +164,7 @@ flex-direction:column;
 
 .list-items {
   display: flex;
+  flex-direction:column;
   width: 96%;
   border-bottom: 1px solid #cec2c2;
   justify-content: space-between;
