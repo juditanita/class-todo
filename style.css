@@ -226,6 +226,7 @@ li.item {
     box-shadow: none;
     margin-inline:1px;
     margin-top: 10px;
+    border:none;
     padding: 1rem;
   }
 
