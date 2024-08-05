@@ -1,8 +1,8 @@
 const todoList = new TodoList();
 const addBtnButton = document.getElementById("addBtn");
-const taskLength = document.getElementById("tasklength");
 
-taskLength.innerText= `You have ${todoList.total} tasks to do`;
+
+
 
 function addTask() {
   const taskInput = document.getElementById("taskInput");

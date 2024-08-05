@@ -141,10 +141,15 @@ input[type="text"]:focus {
 .display-items-container {
   display: flex;
   flex-direction:column;
+  gap:1rem;
 margin-top: 20px;
   width: 95%;
 
   margin: 20px auto;
+}
+.tasklength{
+  color:#cbd5e1;
+  padding-bottom:1rem;
 }
 
 ul {
@@ -239,6 +244,7 @@ li.item {
 
   .display-items-container {
     width: 100%;
+    
   }
   ul {
     width: 100%;
