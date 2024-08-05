@@ -57,11 +57,16 @@ class TodoList {
     console.log(this.tasks.length);
     if (this.total === 0) {
       taskList.classList.remove("add-shadow");
+      taskLength.innerText= `You have no task to do`;
     } else {
       taskList.classList.add("add-shadow");
     }
 
-  taskLength.innerText= `You have ${this.total} tasks to do`;
+    if(this.total ===1){
+      taskLength.innerText= `You have ${this.total} task to do`;
+    }
+ 
+    taskLength.innerText= `You have ${this.total} tasks to do`;
     taskList.innerHTML = "";
 
     this.tasks.forEach((task, index) => {
