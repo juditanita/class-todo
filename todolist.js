@@ -74,7 +74,7 @@ class TodoList {
 `;
 
       taskList.appendChild(listDiv);
-      
+      this.total++;
     });
   }
 }
