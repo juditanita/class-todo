@@ -1,4 +1,4 @@
-// const todoList = new TodoList();
+const todoList = new TodoList();
 const addBtnButton = document.getElementById("addBtn");
 
 
